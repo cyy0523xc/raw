@@ -348,8 +348,8 @@ angular.module('raw.directives', [])
       template :  '<div class="row-fluid">' +
                     '<p class="header">{{label}}</p>' +
                     '<form class="form-search">' +
-                        '<input class="span12" placeholder="filename" type="text" maxlength="50">' +
-                      '<button class="btn btn-block btn-success push-up" ng-click="download()">Download</button>' +
+                        '<input class="span12" placeholder="输入文件名" type="text" maxlength="50">' +
+                      '<button class="btn btn-block btn-success push-up" ng-click="download()">下载</button>' +
                     '</form>' +
                   '</div>',
 
