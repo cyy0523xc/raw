@@ -10,27 +10,27 @@ raw.charts.alluvial = function(){
 		options : {
 			width : {
 		      value : 800,
-		      title : 'Width',
+		      title : '宽度',
 		      type : 'number'
 		    },
 		    height : {
 		      value : 400,
-		      title : 'Height',
+		      title : '高度',
 		      type : 'number'
 		    },
 		    margin : {
 		      value : 5,
-		      title : 'Margin',
+		      title : '外边框',
 		      type : 'number'
 		    },
 		    nodeWidth : {
 		      value : 15,
-		      title : 'Node width',
+		      title : '节点宽度',
 		      type : 'number'
 		    },
 		    nodePadding : {
 		      value : 10,
-		      title : 'Node padding',
+		      title : '节点内边框',
 		      type : 'number'
 		    }
 
