@@ -96,7 +96,7 @@
 	<section id="export" ng-show="data.length">
 		<h3>导出</h3>
 		<div class="row-fluid">
-			<downloader type="svg" label="svg" source="#vis" class="span3"></downloader>
+			<downloader type="svg" label="svg矢量图片" source="#vis" class="span3"></downloader>
 			<downloader type="png" label="png图片 (测试功能)" source="#vis" class="span3"></downloader>
 			<downloader type="json" label="数据 (json格式)" source="{{chart.model.applyOn(data)}}" class="span3"></downloader>
 			<div class="span3">
