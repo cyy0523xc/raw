@@ -174,7 +174,7 @@ angular.module('raw.directives', [])
       link: function postLink(scope, element, attrs) {
 
       	var sortableIn = false;
-      	var dropString = "drop here";
+      	var dropString = "放这里";
         
         function getValues(){
           var values = element.sortable('toArray',{ attribute : "value" }).map(function(d){ return d.length ? JSON.parse(d) : {} });
@@ -240,7 +240,7 @@ angular.module('raw.directives', [])
 	        {
             if(ui.item.hasClass('ui-draggable') && !scope.$eval(attrs.single) || !scope.$eval(attrs.ngModel).value.length ) {
               element.append('<div class="placeholder static">' + dropString + '</div>');
-              if (dropString == 'drop here') element.find('.placeholder').addClass("valid");
+              if (dropString == '放这里') element.find('.placeholder').addClass("valid");
               else element.find('.placeholder').addClass("invalid");
             }
 
@@ -258,7 +258,7 @@ angular.module('raw.directives', [])
 	        { 
 
             if(!ui.item.hasClass('ui-draggable')) {
-              element.append('<div class="placeholder static">drop here</div>');
+              element.append('<div class="placeholder static">放这里</div>');
             }
 
 	          if (!sortableIn || scope.$eval(attrs.single) && scope.$eval(attrs.ngModel).value && scope.$eval(attrs.ngModel).value.length) {
@@ -273,13 +273,13 @@ angular.module('raw.directives', [])
         });
 
 				scope.$watch(function(){return scope.$eval(attrs.ngModel).value},function(val){
-					if(!val.length && !element.find(".placeholder.static").length) element.append('<div class="placeholder static">drop here</div>');
+					if(!val.length && !element.find(".placeholder.static").length) element.append('<div class="placeholder static">放这里</div>');
 				},true)
 
 				scope.$watch("dragging",function(val){
 
 					if (!val || !val.type || val.type == "") {
-						dropString = "drop here";
+						dropString = "放这里";
 						element.find('.placeholder').html(dropString);
             element.find('.placeholder').removeClass("invalid");
             element.find('.placeholder').removeClass("valid");
@@ -288,7 +288,7 @@ angular.module('raw.directives', [])
 
 					var validTypes = scope.$eval(attrs.accept);
 					if(validTypes.indexOf(val.type) != -1) {
-						dropString = "drop here";
+						dropString = "放这里";
 						element.find('.placeholder').html(dropString);
             element.find('.placeholder').removeClass("invalid");
             element.find('.placeholder').addClass("valid");
