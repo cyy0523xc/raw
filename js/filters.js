@@ -16,7 +16,7 @@ angular.module('raw.filters', [])
 //});
 
 
-app.filter('field_type_chn', function() {
+raw.filters('field_type_chn', function() {
     return function(type_en) {
         var ft_chn = {'NUMBER':'数字', 'STRING':'字符串'};
         return ft_chn[type_en];
