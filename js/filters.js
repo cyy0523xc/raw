@@ -10,7 +10,7 @@ angular.module('raw.filters', [])
 });
 
 angular.module('raw.filters', [])
-.filter('field_type_chn', function(type_en) {
+.filter('field_type_chn', function(field.type) {
     var ft_chn = {'NUMBER':'数字', 'STRING':'字符串'};
-    return ft_chn[type_en];
+    return ft_chn[field.type];
 });
