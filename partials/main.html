@@ -41,7 +41,7 @@
 			<!-- Header-->
 			<div class="span3">
 				<ul droppable="droppable" accept="&gt; li" group="group" every="1" watch="header" class="unstyled keys">
-					<li draggable="draggable" ng-repeat="field in header" connect-to-sortable="ul.map" helper="clone" value="{{field}}" class="key span12">{{field.key}}<span class="muted"> {{field.type}}</span></li>
+					<li draggable="draggable" ng-repeat="field in header" connect-to-sortable="ul.map" helper="clone" value="{{field}}" class="key span12">{{field.key}}<span class="muted"> {{field.type | field_type_chn}}</span></li>
 				</ul>
 			</div>
 			<!-- Model-->

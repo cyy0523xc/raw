@@ -2,9 +2,15 @@
 
 /* Filters */
 
-angular.module('raw.filters', []).
-  filter('interpolate', function (version) {
+angular.module('raw.filters', [])
+.filter('interpolate', function (version) {
     return function (text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
+        return String(text).replace(/\%VERSION\%/mg, version);
     }
-  });
+})
+.filter('field_type_chn', function(type_en) {
+            var ft_chn = {'NUMBER':'数字', 'STRING':'字符串'};
+            return ft_chn[type_en];
+        }
+       )
+       ;
