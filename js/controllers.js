@@ -35,13 +35,16 @@ angular.module('raw.controllers', []).
       );
     })
 
+    // 图形选择右边的背景图片
     $scope.getBackground = function(chart) {
         return chart && chart.image? { 'background-image': 'url(' + chart.image + ')'  } : { 'background-image' : 'none' };
     }
 
 
+    // 样本数据选择
     $scope.chooseSample = function(sample){
       $scope.sample = sample;
+      console.log(sample);
     }
 
     // loading charts
